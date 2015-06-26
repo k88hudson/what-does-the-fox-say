@@ -458,9 +458,12 @@ var Fox = React.createClass({
   },
   render: function() {
     return(
-    <div>
-      { this.state.answer }<br/><br/>
-      <button onClick={this.generateFortune}>Ask!</button>
+    <div className="fox">
+      <img src="./errietta-fox.jpg" />
+      <div className="text">
+        { this.state.answer }<br/><br/>
+        <button onClick={this.generateFortune}>Ask!</button>
+      </div>
     </div>);
   },
 });

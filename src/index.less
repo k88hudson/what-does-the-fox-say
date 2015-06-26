@@ -3,11 +3,52 @@
 }
 
 body {
-  font-family: sans-serif;
-  color: #333;
+  font-family: 'Fira Sans', sans-serif;
+  color: #555;
   margin: 0;
 }
 
-main {
-  /* background: #282A36; */
+.fox {
+  font-size: 14px;
+  img {
+    width: 100%;
+  }
+  position: relative;
+  .text {
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    top: 60%;
+    left: 40%;
+    max-width: 300px;
+    &::before {
+      position: absolute;
+      left: 20px;
+      bottom: 100%;
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid white;
+    }
+    button {
+      position: relative;
+      font-size: inherit;
+      background-color: #F69541;
+      color: white;
+      border-radius: 2px;
+      box-shadow: 0 2px 0 0 darken(#F69541, 20%);
+      padding: 6px 20px;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        top: 2px;
+        box-shadow: none;
+      }
+    }
+  }
 }
