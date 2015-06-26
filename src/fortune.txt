@@ -1,6 +1,4 @@
-var React = require('react');
-
-var fortunes = new Array(
+var fortunes = array(
 "A day for firm decisions!!!!!  Or is it?",
 "A few hours grace before the madness begins again.",
 "A gift of a flower will soon be made to you.",
@@ -185,7 +183,7 @@ var fortunes = new Array(
 "There was a phone call for you.",
 "There will be big changes for you but you will be happy.",
 "Things will be bright in P.M.  A cop will shine a light in your face.",
-"Think twice before speaking, but don't say 'think think click click'.",
+"Think twice before speaking, but don't say "think think click click".",
 "This life is yours.  Some of it was given to you; the rest, you made yourself.",
 "This will be a memorable month -- no matter how hard you try to forget it.",
 "Time to be aggressive.  Go after a tattooed Virgo.",
@@ -277,7 +275,7 @@ var fortunes = new Array(
 "You have the body of a 19 year old.  Please return it before it gets wrinkled.",
 "You have the capacity to learn from mistakes.  You'll learn a lot today.",
 "You have the power to influence all with whom you come in contact.",
-"You learn to write as if to someone else because NEXT YEAR YOU WILL BE 'SOMEONE ELSE.'",
+"You learn to write as if to someone else because NEXT YEAR YOU WILL BE "SOMEONE ELSE."",
 "You like to form new friendships and make new acquaintances.",
 "You look like a million dollars.  All green and wrinkled.",
 "You look tired.",
@@ -398,7 +396,7 @@ var fortunes = new Array(
 "You're almost as happy as you think you are.",
 "You're at the end of the road again.",
 "You're being followed.  Cut out the hanky-panky for a few days.",
-"You're currently going through a difficult transition period called 'Life.'",
+"You're currently going through a difficult transition period called "Life."",
 "You're definitely on their list.  The question to ask next is what list it is.",
 "You're growing out of some of your problems, but there are others that you're growing into.",
 "You're not my type.  For that matter, you're not even my species!!!",
@@ -445,33 +443,3 @@ var fortunes = new Array(
 "Your temporary financial embarrassment will be relieved in a surprising manner.",
 "Your true value depends entirely on what you are compared with."
 );
-
-var Fox = React.createClass({
-  getInitialState: function() {
-    return {
-      answer: "Ask me a question"
-    };
-  },
-  generateFortune: function() {
-    var fortune = fortunes[Math.floor(Math.random()*fortunes.length)];
-    this.setState({ answer: fortune });
-  },
-  render: function() {
-    return(
-    <div>
-      { this.state.answer }<br/><br/>
-      <button onClick={this.generateFortune}>Ask!</button>
-    </div>);
-  },
-});
-
-var App = React.createClass({
-  render: function () {
-    return (<main>
-      <Fox>
-      </Fox>
-    </main>);
-  }
-});
-
-React.render(<App />, document.getElementById('app'));
