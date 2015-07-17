@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Fira Sans', sans-serif;
+  color: #555;
+  margin: 0;
+}
+.fox {
+  font-size: 14px;
+  position: relative;
+}
+.fox img {
+  width: 100%;
+}
+.fox .text {
+  position: absolute;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  top: 60%;
+  left: 40%;
+  max-width: 300px;
+}
+.fox .text::before {
+  position: absolute;
+  left: 20px;
+  bottom: 100%;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+.fox .text button {
+  position: relative;
+  font-size: inherit;
+  background-color: #F69541;
+  color: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 0 0 #c86209;
+  padding: 6px 20px;
+  border: none;
+}
+.fox .text button:focus {
+  outline: none;
+}
+.fox .text button:active {
+  top: 2px;
+  box-shadow: none;
+}
+/*# sourceMappingURL=index.css.map */
